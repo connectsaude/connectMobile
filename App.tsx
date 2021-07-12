@@ -1,21 +1,32 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StatusBar } from 'react-native';
+import { SignIn } from './src/screens/SignIn';
+import { useFonts } from 'expo-font';
+import { Inter_500Medium, Inter_700Bold } from '@expo-google-fonts/inter'
+import { Poppins_500Medium, Poppins_700Bold } from '@expo-google-fonts/poppins';
+import AppLoading from 'expo-app-loading';
 
 export default function App() {
+
+  const [fontsLoaded] = useFonts({
+    Inter_500Medium,
+    Inter_700Bold,
+    Poppins_500Medium,
+    Poppins_700Bold
+  });
+
+  if(!fontsLoaded){
+    return <AppLoading />
+  }
+
   return (
-    <View style={styles.container}>
-      <Text>Ola Mundo!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <>
+    <StatusBar
+        barStyle="dark-content"
+        backgroundColor="transparent"
+        translucent
+      />
+    <SignIn />
+    </>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
