@@ -24,16 +24,7 @@ export const styles = StyleSheet.create({
     marginTop: 7,
     fontFamily: theme.fonts.Poppins700
   },
-  inputs: {
-    height: 40,
-    marginTop: 5,
-    color: theme.colors.blue200,
-    borderColor: theme.colors.blue200,
-    borderWidth: 1,
-    borderRadius: 10,
-    paddingLeft: 10,
-    justifyContent: 'space-between'
-  },
+
   icon:{
     alignItems: 'flex-end',
     color: theme.colors.blue200,
