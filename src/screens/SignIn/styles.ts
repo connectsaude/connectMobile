@@ -11,7 +11,9 @@ export const styles = StyleSheet.create({
     padding: 25,
   },
   image:{
-  marginTop: 10,
+    width: 100,
+    height: 100,
+    marginTop: 10,
   },
   content: {
     width: '100%',
@@ -24,7 +26,10 @@ export const styles = StyleSheet.create({
     marginTop: 7,
     fontFamily: theme.fonts.Poppins700
   },
-
+  teste:{
+    flex: 1,
+   alignContent: 'flex-end'
+  },
   icon:{
     alignItems: 'flex-end',
     color: theme.colors.blue200,

@@ -10,6 +10,6 @@ export const styles  = StyleSheet.create({
       paddingLeft: 10,
       borderWidth: 1,
       borderRadius: 10,
-      justifyContent: 'space-between'
+      letterSpacing: 2,
   }
 })

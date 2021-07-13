@@ -5,32 +5,30 @@ import { AntDesign, Entypo } from '@expo/vector-icons';
 import { Button } from '../../components/Button';
 import { Input } from '../../components/Input';
 import LogoC from '../../assets/LogoCC.svg';
-import LogoPrefeitura from '../../assets/LogoPrefeitura.png';
-import LogoPb from '../../assets/LogoPb.png';
-import LogoSus from '../../assets/LogoSus.png';
+import LogoPrefeitura from '../../assets/LogoPre.svg';
+import LogoPb from '../../assets/LogoPB.svg';
+import LogoSus from '../../assets/LogoSUS.svg';
 
 import { styles } from './styles';
-import { SvgProps } from 'react-native-svg';
-
-type Props = React.FC<SvgProps>;
 
 export function SignIn() {
   return (
     <View style={styles.container} >
-      <Image
-        style={styles.image}
-        source={LogoC}
-      />
+      <LogoC style={styles.image}/>
 
       <View style={styles.content}>
         <Text style={styles.texts} >Login :</Text>
-        <Input>Digite seu CPF</Input>
+        <Input 
+        placeholderTextColor="#5697BF"
+        placeholder="Digite seu CPF"
+        />
         <Text style={styles.texts} >Senha :</Text>
 
-        <Input>
-          Digite sua senha
-          <Entypo name="eye-with-line" size={20} color="#5697BF" />
-        </Input>
+        <Input 
+        secureTextEntry={true}
+        placeholderTextColor="#5697BF"
+        placeholder="Digite sua senha"
+        />
       </View>
       <Button>
         Entrar
@@ -53,9 +51,9 @@ export function SignIn() {
 
 
       <View style={styles.parceiros} >
-        <Image style={styles.img} source={LogoSus} />
-        <Image style={styles.img} source={LogoPb} />
-        <Image style={styles.img} source={LogoPrefeitura} />
+        <LogoSus style={styles.img} />
+        <LogoPb style={styles.img} />
+        <LogoPrefeitura style={styles.img} />
       </View>
 
     </View>
