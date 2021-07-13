@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, Alert, Modal } from 'react-native';
+import { View, Text, Pressable, Modal } from 'react-native';
 import { useNavigation } from '@react-navigation/native'
 import LogoPP from '../../assets/LogoPP.svg';
 import { Input } from '../../components/Input';
@@ -11,14 +11,6 @@ export function RecoveryPass() {
 
   const [modalVisible, setModalVisible] = useState(false);
   const navigator = useNavigation();
-
-  function hangleOpenModal() {
-    setModalVisible(!modalVisible);
-  }
-
-  function hangleCloseModal() {
-    setModalVisible(!modalVisible);
-  }
 
   return (
     <View style={styles.container} >
@@ -43,18 +35,18 @@ export function RecoveryPass() {
           transparent={true}
           visible={modalVisible}
           onRequestClose={() => {
-            hangleOpenModal()
+            setModalVisible(!modalVisible)
           }}
         >
           <View style={styles.contentModal}>
             <View style={styles.modalView}>
               <Text style={styles.modalText}>Foi enviado um email com a redefinição da senha.</Text>
-              <Button
+              <Pressable
                 style={[styles.button, styles.buttonClose]}
-                onPress={() => hangleCloseModal()}
+                onPress={() => setModalVisible(!modalVisible)}
               >
                 <Text style={styles.textStyle}>OK</Text>
-              </Button>
+              </Pressable>
             </View>
           </View>
         </Modal>
