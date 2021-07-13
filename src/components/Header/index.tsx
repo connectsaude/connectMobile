@@ -1,0 +1,31 @@
+import React from 'react';
+import { View, Text, StatusBar } from 'react-native'; 
+import { AntDesign } from '@expo/vector-icons'; 
+import { Feather } from '@expo/vector-icons';
+
+import { styles } from './styles'
+
+export function Header(){
+  return(
+    <>
+    <StatusBar
+        barStyle="light-content"
+        backgroundColor="#48B0D9"
+        translucent
+      />
+    <View style={styles.container} >
+      <View style={styles.menu} >
+      <Feather name="menu" size={35} color="#0B80C8" />
+      </View>
+      <View style={styles.textLabel} >
+      <Text style={styles.title} >Bem Vindo Daniel !</Text>
+      <Text style={styles.subTitle} >Como podemos te ajudar ?</Text>
+      <Text style={styles.subTitle} >Tipo Sanguineo : O+</Text>
+      </View>
+      <View style={styles.notification} >
+      <AntDesign name="bells" size={28} color="#0B80C8" />
+      </View>
+    </View>
+    </>
+  );
+}

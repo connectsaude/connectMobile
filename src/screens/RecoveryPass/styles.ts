@@ -32,16 +32,10 @@ export const styles = StyleSheet.create({
     fontFamily: theme.fonts.Poppins700,
     
   },
-  data: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-  },
   contentModal: {
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    marginTop: getStatusBarHeight(),
     backgroundColor: 'rgba(0,0,0,0.7)',
   },
   modalView: {

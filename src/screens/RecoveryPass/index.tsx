@@ -31,7 +31,7 @@ export function RecoveryPass() {
 
       <View>
         <Modal
-          animationType="slide"
+          animationType="none"
           transparent={true}
           visible={modalVisible}
           onRequestClose={() => {

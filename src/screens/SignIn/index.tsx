@@ -20,6 +20,10 @@ export function SignIn() {
     navigator.navigate('SignUp');
   }
 
+  function handleSignIn(){
+    navigator.navigate('Home')
+  }
+
   function handleRecoveryPass(){
     navigator.navigate('RecoveryPass');
   }
@@ -41,7 +45,7 @@ export function SignIn() {
         placeholder="Digite sua senha"
         />
       </View>
-      <Button>
+      <Button onPress={() => handleSignIn()}>
         Entrar
       </Button>
 
