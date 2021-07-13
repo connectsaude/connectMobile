@@ -1,10 +1,10 @@
 import React from 'react';
 import { StatusBar } from 'react-native';
-import { SignIn } from './src/screens/SignIn';
 import { useFonts } from 'expo-font';
 import { Inter_500Medium, Inter_700Bold } from '@expo-google-fonts/inter'
 import { Poppins_500Medium, Poppins_700Bold } from '@expo-google-fonts/poppins';
 import AppLoading from 'expo-app-loading';
+import { Routes } from './src/routes'
 
 export default function App() {
 
@@ -26,7 +26,7 @@ export default function App() {
         backgroundColor="transparent"
         translucent
       />
-    <SignIn />
+      <Routes />
     </>
   );
 }

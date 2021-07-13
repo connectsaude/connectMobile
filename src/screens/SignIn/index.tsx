@@ -1,7 +1,8 @@
 import React from 'react';
-import { View, Text, Image, TextInput } from 'react-native';
+import { View, Text  } from 'react-native';
 import { RectButton } from 'react-native-gesture-handler';
-import { AntDesign, Entypo } from '@expo/vector-icons';
+import { useNavigation } from '@react-navigation/native'
+import { AntDesign } from '@expo/vector-icons';
 import { Button } from '../../components/Button';
 import { Input } from '../../components/Input';
 import LogoC from '../../assets/LogoCC.svg';
@@ -12,6 +13,16 @@ import LogoSus from '../../assets/LogoSUS.svg';
 import { styles } from './styles';
 
 export function SignIn() {
+
+  const navigator = useNavigation();
+
+  function handleSignUp(){
+    navigator.navigate('SignUp');
+  }
+
+  function handleRecoveryPass(){
+    navigator.navigate('RecoveryPass');
+  }
   return (
     <View style={styles.container} >
       <LogoC style={styles.image}/>
@@ -36,7 +47,7 @@ export function SignIn() {
 
       <View style={styles.contentCad} >
 
-        <RectButton style={styles.buttonCadastro} >
+        <RectButton onPress={() => handleSignUp()} style={styles.buttonCadastro} >
           <AntDesign
             name="adduser"
             color="#5697BF"
@@ -44,7 +55,9 @@ export function SignIn() {
           />
           <Text style={styles.titleButton} >Cadastra-se</Text>
         </RectButton>
-        <RectButton style={styles.buttonSenha} >
+        <RectButton  
+        onPress={() => handleRecoveryPass()}
+        style={styles.buttonSenha} >
           <Text style={styles.titleButton} >Esqueceu a senha ?</Text>
         </RectButton>
       </View>
