@@ -11,5 +11,13 @@ export const styles  = StyleSheet.create({
       borderWidth: 1,
       borderRadius: 10,
       letterSpacing: 2,
-  }
+  },
+  textLabel:{
+    color: theme.colors.blue100,
+    fontSize: 14,
+    fontWeight: '500',
+    marginTop: 5,
+    fontFamily: theme.fonts.Poppins700,
+    
+  },
 })

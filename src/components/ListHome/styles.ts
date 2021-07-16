@@ -3,15 +3,13 @@ import { theme } from '../../global/styles/theme';
 
 export const styles = StyleSheet.create({
   container:{
-    marginTop: 30,
-    justifyContent: 'space-between',
     alignItems: 'center',
+    justifyContent: 'center'
   },
   content:{
     backgroundColor: theme.colors.blue200,
     borderRadius: 10,
     alignItems: 'center',
-    marginLeft: 20,
     justifyContent: 'center',
     width: 90,
     height: 116,

@@ -1,5 +1,10 @@
 import React, { ReactNode } from 'react';
-import { View, TextInput, KeyboardTypeOptions, ReturnKeyTypeOptions } from 'react-native';
+import { 
+  View, 
+  TextInput, 
+  KeyboardTypeOptions,
+   ReturnKeyTypeOptions, 
+   Text, StyleProp } from 'react-native';
 
 import { styles } from './styles'
 
@@ -10,7 +15,7 @@ type Props = {
   placeholderTextColor: string;
   keyboardType?: KeyboardTypeOptions | undefined;
   returnKeyType?: ReturnKeyTypeOptions;
-
+  Label?: string;
 }
 
 export function Input({ 
@@ -19,10 +24,12 @@ export function Input({
   returnKeyType,
   keyboardType,
   placeholder,
+  Label,
   placeholderTextColor,
    ...props }: Props){
   return(
     <View>
+      <Text style={styles.textLabel} >{Label}</Text>
         <TextInput 
         keyboardType={keyboardType}
         returnKeyType={returnKeyType}

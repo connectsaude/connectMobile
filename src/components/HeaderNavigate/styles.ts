@@ -2,33 +2,25 @@ import { StyleSheet } from 'react-native';
 import { getStatusBarHeight } from 'react-native-status-bar-height';
 import { theme } from '../../global/styles/theme';
 
-
 export const styles = StyleSheet.create({
-  container: {
-    flex: 1,
+  container:{
+    width: '100%',
+    height: 60,
     marginTop: getStatusBarHeight(),
+    flexDirection: 'row',
+    justifyContent: 'center',
     alignItems: 'center',
-    justifyContent: 'space-between',
-    padding: 25,
-  },
-  content: {
-    width: '100%',
-    marginTop: 0,
-  },
-  scroll:{
-    width: '100%',
-    marginTop: 0,
-    
+    paddingHorizontal: 15,
+    borderBottomWidth:1,
+    borderBottomColor: theme.colors.blue200,
   },
   title:{
+    flex: 1,
     color: theme.colors.blue100,
-    fontSize: 14,
-    marginTop: 5,
     fontFamily: theme.fonts.Poppins700,
+    textAlign: 'center',
+    fontSize: 15,
+    marginTop: 5,
+    marginBottom: -5,
   },
-  data: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-  }
 })

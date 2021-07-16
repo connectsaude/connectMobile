@@ -7,12 +7,6 @@ import { styles } from './styles'
 
 export function Header(){
   return(
-    <>
-    <StatusBar
-        barStyle="light-content"
-        backgroundColor="#48B0D9"
-        translucent
-      />
     <View style={styles.container} >
       <View style={styles.menu} >
       <Feather name="menu" size={35} color="#0B80C8" />
@@ -26,6 +20,5 @@ export function Header(){
       <AntDesign name="bells" size={28} color="#0B80C8" />
       </View>
     </View>
-    </>
   );
 }

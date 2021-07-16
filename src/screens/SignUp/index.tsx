@@ -18,47 +18,51 @@ export function SignUp() {
   return (
     <View style={styles.container} >
       <LogoPP />
-      <Text style={styles.textLabel} >Vamos realizar seu Cadastro</Text>
-      <ScrollView style={styles.scroll} >
+      <Text style={styles.title} >Vamos realizar seu Cadastro</Text>
+      <ScrollView 
+      indicatorStyle='white'
+      style={styles.scroll} >
         <View style={styles.content} >
-          <Text style={styles.textLabel} >Nome :</Text>
           <Input
+            Label="Nome :"
             returnKeyType="next"
             placeholderTextColor="#5697BF"
             placeholder="Digite seu Primeiro Nome"
           />
-          <Text style={styles.textLabel}>Sobrenome :</Text>
           <Input
+            Label="Sobrenome :"
             returnKeyType="next"
             placeholderTextColor="#5697BF"
             placeholder="Digite seu Sobrenome"
           />
-
-          <Text style={styles.textLabel} >Seu CPF :</Text>
           <Input
+            Label="Email :"
+            returnKeyType="next"
+            placeholderTextColor="#5697BF"
+            placeholder="Digite seu Email"
+          />
+          <Input
+            Label="Seu CPF :"
             returnKeyType="next"
             keyboardType="numeric"
             placeholderTextColor="#5697BF"
             placeholder="Digite seu CPF"
           />
-
-          <Text style={styles.textLabel} >Data de Nascimento :</Text>
           <Input
+            Label="Data Nascimento :"
             returnKeyType="next"
             keyboardType="numeric"
             placeholderTextColor="#5697BF"
             placeholder="DD/MM/AAAA"
           />
-
-          <Text style={styles.textLabel} >Digite sua Senha :</Text>
           <Input
+            Label="Senha :"
             returnKeyType="next"
             placeholderTextColor="#5697BF"
             placeholder="Digite sua Senha"
           />
-
-          <Text style={styles.textLabel} >Confirme sua Senha :</Text>
           <Input
+            Label="Confirme a senha :"
             returnKeyType="send"
             placeholderTextColor="#5697BF"
             placeholder="Confirme sua senha"

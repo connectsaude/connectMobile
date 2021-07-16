@@ -1,10 +1,13 @@
-import React from 'react';
-import { View, Text  } from 'react-native';
+import React, { useState } from 'react';
+import { View, Text, TouchableOpacity, TextInput } from 'react-native';
 import { RectButton } from 'react-native-gesture-handler';
 import { useNavigation } from '@react-navigation/native'
 import { AntDesign } from '@expo/vector-icons';
+import { Ionicons } from '@expo/vector-icons';
 import { Button } from '../../components/Button';
 import { Input } from '../../components/Input';
+
+
 import LogoC from '../../assets/LogoCC.svg';
 import LogoPrefeitura from '../../assets/LogoPre.svg';
 import LogoPb from '../../assets/LogoPB.svg';
@@ -15,35 +18,51 @@ import { styles } from './styles';
 export function SignIn() {
 
   const navigator = useNavigation();
+  const [hidePass, setHidePass] = useState(true);
 
-  function handleSignUp(){
+  function handleSignUp() {
     navigator.navigate('SignUp');
   }
 
-  function handleSignIn(){
+  function handleSignIn() {
     navigator.navigate('Home')
   }
 
-  function handleRecoveryPass(){
+  function handleRecoveryPass() {
     navigator.navigate('RecoveryPass');
   }
   return (
     <View style={styles.container} >
-      <LogoC style={styles.image}/>
+      <LogoC style={styles.image} />
 
       <View style={styles.content}>
-        <Text style={styles.texts} >Login :</Text>
-        <Input 
-        placeholderTextColor="#5697BF"
-        placeholder="Digite seu CPF"
+        <Input
+          Label="Login :"
+          placeholderTextColor="#5697BF"
+          placeholder="Digite seu CPF"
         />
-        <Text style={styles.texts} >Senha :</Text>
 
-        <Input 
-        secureTextEntry={true}
-        placeholderTextColor="#5697BF"
-        placeholder="Digite sua senha"
-        />
+        <Text style={styles.texts} >Senha :</Text>
+        <View style={styles.textArea} >
+          <TextInput
+            style={styles.input}
+            secureTextEntry={hidePass}
+            placeholderTextColor="#5697BF"
+            placeholder="Digite sua senha"
+          />
+          <TouchableOpacity
+            onPress={() => setHidePass(!hidePass)}
+            style={styles.iconEye} >
+            {hidePass ?
+              <Ionicons name="eye" size={24} color="#5697BF" />
+              :
+              <Ionicons name="eye-off" size={24} color="#5697BF" />
+            }
+
+          </TouchableOpacity>
+
+        </View>
+
       </View>
       <Button onPress={() => handleSignIn()}>
         Entrar
@@ -59,9 +78,9 @@ export function SignIn() {
           />
           <Text style={styles.titleButton} >Cadastra-se</Text>
         </RectButton>
-        <RectButton  
-        onPress={() => handleRecoveryPass()}
-        style={styles.buttonSenha} >
+        <RectButton
+          onPress={() => handleRecoveryPass()}
+          style={styles.buttonSenha} >
           <Text style={styles.titleButton} >Esqueceu a senha ?</Text>
         </RectButton>
       </View>

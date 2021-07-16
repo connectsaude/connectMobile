@@ -5,14 +5,14 @@ import { getStatusBarHeight } from 'react-native-status-bar-height';
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
+    padding: 15,
     marginTop: getStatusBarHeight(),
     alignItems: 'center',
     justifyContent: 'space-between',
-    padding: 25,
   },
   image:{
     width: 100,
-    height: 100,
+    height: 116,
     marginTop: 10,
   },
   content: {
@@ -22,13 +22,8 @@ export const styles = StyleSheet.create({
   texts: {
     color: theme.colors.blue100,
     fontSize: 14,
-    fontWeight: '500',
     marginTop: 7,
     fontFamily: theme.fonts.Poppins700
-  },
-  teste:{
-    flex: 1,
-   alignContent: 'flex-end'
   },
   icon:{
     alignItems: 'flex-end',
@@ -59,5 +54,27 @@ export const styles = StyleSheet.create({
   },
   buttonSenha: {
     marginTop: 10,
+  },
+  textArea:{
+    flexDirection: 'row',
+    width: '100%',
+    alignItems: 'center',
+    borderColor: theme.colors.blue200,
+    borderWidth: 1,
+    borderRadius: 10,
+  },
+  input:{
+    width: '85%',
+    height: 45,borderRadius: 10,
+    paddingLeft: 10,
+
+  },
+  iconEye:{
+    width: '15%',
+    borderRadius: 5,
+    height: 45,
+    justifyContent: 'center',
+    alignItems: 'center',
+
   }
 })
