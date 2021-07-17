@@ -13,10 +13,12 @@ export const styles = StyleSheet.create({
   text:{
     alignItems: 'center',
     flexDirection: 'row',
+    justifyContent: 'flex-start',
     marginTop: 10,
     paddingHorizontal: 15,
     fontFamily: theme.fonts.Poppins500,
     marginBottom: 7,
+    
   },
   icon:{
     marginLeft: 30,

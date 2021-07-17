@@ -13,10 +13,4 @@ export const ListItensHome = [
   { id:'4', title:'Meus Exames', icon: Exames },
   { id:'5', title:'Meu Historico', icon: Historico },
   { id:'6', title:'Telemedicina', icon: Telemedicina },
-  { id:'7', title:'Agendamentos', icon: Agendamento },
-  { id:'8', title:'Vacinas', icon: Vacina },
-  { id:'9', title:'Cartao do SUS', icon:Cartao },
-  { id:'10', title:'Meus Exames', icon: Exames },
-  { id:'11', title:'Meu Historico', icon: Historico },
-  { id:'12', title:'Telemedicina', icon: Telemedicina },
  ]

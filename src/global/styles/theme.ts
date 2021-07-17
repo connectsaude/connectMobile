@@ -6,7 +6,7 @@ export const theme = {
     overlay: 'rgba(0,0,0,0.7)',
     highlight: '#ABB1CC',
     heading: '#DDE3F0',
-    line: '#991F36',
+    red: '#E53E3E',
     on: '#32BD50',
   },
 

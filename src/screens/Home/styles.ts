@@ -19,7 +19,7 @@ export const styles = StyleSheet.create({
     fontSize: 13,
     fontFamily: theme.fonts.Poppins700,
   },
-  teste:{
+  button:{
     paddingHorizontal: 10,
     marginLeft: 7,
     justifyContent: 'space-between',
