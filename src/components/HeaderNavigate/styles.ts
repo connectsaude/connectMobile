@@ -1,4 +1,5 @@
 import { StyleSheet } from 'react-native';
+import { RFValue } from 'react-native-responsive-fontsize';
 import { getStatusBarHeight } from 'react-native-status-bar-height';
 import { theme } from '../../global/styles/theme';
 
@@ -17,10 +18,9 @@ export const styles = StyleSheet.create({
   title:{
     flex: 1,
     color: theme.colors.blue100,
-    fontFamily: theme.fonts.Poppins700,
+    fontFamily: theme.fonts.bold,
+    justifyContent: 'center',
     textAlign: 'center',
-    fontSize: 15,
-    marginTop: 5,
-    marginBottom: -5,
+    fontSize: RFValue(20),
   },
 })

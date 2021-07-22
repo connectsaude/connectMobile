@@ -19,9 +19,9 @@ export function SignUp() {
     <View style={styles.container} >
       <LogoPP />
       <Text style={styles.title} >Vamos realizar seu Cadastro</Text>
-      <ScrollView 
-      indicatorStyle='white'
-      style={styles.scroll} >
+      <ScrollView
+        indicatorStyle='white'
+        style={styles.scroll} >
         <View style={styles.content} >
           <Input
             Label="Nome :"

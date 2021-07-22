@@ -5,6 +5,7 @@ import { Header } from '../../components/Header';
 import { ListHome } from '../../components/ListHome'
 import { ListItensHome } from '../../utils/ListItensHome';
 import { styles } from './styles';
+import { CardProfile } from '../../components/CardProfile';
 
 export function Home() {
 
@@ -18,21 +19,19 @@ export function Home() {
   return (
     <>
       <Header />
-      <View >
-        <View style={styles.welcome}>
-          <Text style={styles.textWel} >A Medicina na palma da sua mão !</Text>
-        </View>
-      </View>
+      <CardProfile />
       <FlatList
         data={ListItensHome}
         keyExtractor={(item) => item.id}
         renderItem={({ item }) =>
-          <View style={styles.button} >
+          <View style={styles.container} >
+            <View style={styles.content} >
             <ListHome
               onPress={() => handleSchedules(item.title)}
               title={item.title}
               icon={item.icon}
             />
+            </View>
           </View>
         }
         numColumns={3}

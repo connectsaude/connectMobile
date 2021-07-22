@@ -1,13 +1,10 @@
 import React, { useRef, useState } from 'react';
 import { View, Text, FlatList } from 'react-native';
-import { Modalize } from 'react-native-modalize';
 import { ButtonAdd } from '../../components/ButtonAdd';
 import { HeaderNavigate } from '../../components/HeaderNavigate';
-import { ListHome } from '../../components/ListHome';
 import { ListSchedules } from '../../utils/ListSchedules';
-import { ListTable } from '../../components/ListTable';
-import Agendamento from '../../assets/Agendamento.svg';
-import ImgAgenda from '../../assets/imgAgendamento.svg';
+import { SchedulesCard } from '../../components/SchedulesCard';
+
 
 
 import { styles } from './styles'
@@ -47,63 +44,28 @@ export function Schedules({ open }: Props) {
             <ButtonAdd />
           }
         />
-        <View style={styles.img} >
-        <ImgAgenda style={styles.img2} />
-        </View>
-        
-        <View style={styles.titleList} >
-          <Text style={styles.textList} >Data</Text>
-          <Text style={styles.textList} >Exame</Text>
-          <Text style={styles.textList} >Status</Text>
-          <Text />
-        </View>
-
-
       </View>
+      <View style={styles.content} >
+        <Text  style={styles.textTitle}>Agendamentos</Text>
+      </View>
+      
       <FlatList
         data={ListSchedules}
         keyExtractor={(item) => item.id}
         renderItem={({ item }) =>
-          <ListTable
+        <View style={styles.container} >
+          <SchedulesCard
             onPress={() => handleModal(item.id)}
+            id={item.id}
             date={item.date}
             type={item.type}
+            locale={item.locale}
             status={item.status}
           />
+          </View>
         }
       />
-
-      <Modalize
-        ref={modalizeRef}
-        snapPoint={280}
-        modalHeight={280}
-        HeaderComponent={
-          <View style={styles.containerModal} >
-            <Text style={styles.titleModal} >Detalhes do Agendamento</Text>
-          </View>
-        }
-      >
-
-        <View style={styles.contentModal} >
-          <Text style={styles.textModal} >Tipo do Exame :
-            <Text style={styles.textAgend} >{schedules?.type}</Text></Text>
-          <Text style={styles.textModal} >Data do Agendamento :
-            <Text style={styles.textAgend} >{schedules?.date}</Text></Text>
-          <Text style={styles.textModal} >Local :
-            <Text style={styles.textAgend} >{schedules?.locale}</Text></Text>
-          <Text style={styles.textModal} >Contato :
-            <Text style={styles.textAgend} >{schedules?.contat}</Text> </Text>
-          <Text style={styles.textModal} >Status :
-            <Text style={styles.textAgend} >{schedules?.status}</Text> </Text>
-        </View>
-        {schedules?.status !== 'Agendado' || 'Efetuado' &&
-          <View style={styles.button} >
-            <RectButton style={styles.buttonModal} >
-              <Text style={styles.textButton} >Cancelar Agendamento</Text>
-            </RectButton>
-          </View>
-        }
-      </Modalize>
+      
     </>
   );
 }

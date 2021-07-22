@@ -1,40 +1,40 @@
 import { StyleSheet } from 'react-native';
 import { theme } from '../../global/styles/theme';
 import { getStatusBarHeight } from 'react-native-status-bar-height';
+import { RFPercentage } from 'react-native-responsive-fontsize';
 
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    padding: 15,
+    padding: RFPercentage(2),
     marginTop: getStatusBarHeight(),
     alignItems: 'center',
     justifyContent: 'space-between',
   },
   image:{
-    width: 100,
-    height: 116,
-    marginTop: 10,
+    width: RFPercentage(20),
+    height: RFPercentage(23),
+    marginTop: RFPercentage(2),
   },
   content: {
     width: '100%',
-    marginTop: 0,
+    marginTop: RFPercentage(1),
   },
   texts: {
-    color: theme.colors.blue100,
+    color: theme.colors.primary,
     fontSize: 14,
     marginTop: 7,
-    fontFamily: theme.fonts.Poppins700
+    fontFamily: theme.fonts.bold
   },
   icon:{
     alignItems: 'flex-end',
-    color: theme.colors.blue200,
+    color: theme.colors.primary,
     fontSize: 20,
-    marginLeft: 50,
   },
  
   titleButton:{
-    color: theme.colors.blue200,
-    fontFamily: theme.fonts.Inter700,
+    color: theme.colors.primary,
+    fontFamily: theme.fonts.bold,
   },
   contentCad:{
     alignItems: 'center',
@@ -59,13 +59,14 @@ export const styles = StyleSheet.create({
     flexDirection: 'row',
     width: '100%',
     alignItems: 'center',
-    borderColor: theme.colors.blue200,
+    borderColor: theme.colors.primary,
     borderWidth: 1,
     borderRadius: 10,
   },
   input:{
     width: '85%',
-    height: 45,borderRadius: 10,
+    height: 45,
+    borderRadius: 10,
     paddingLeft: 10,
 
   },

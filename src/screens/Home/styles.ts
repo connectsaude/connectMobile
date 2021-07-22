@@ -1,24 +1,23 @@
 import { StyleSheet } from 'react-native';
+import { RFPercentage } from 'react-native-responsive-fontsize';
 import { theme } from '../../global/styles/theme';
 
 export const styles = StyleSheet.create({
-  content:{
-    backgroundColor: theme.colors.blue200,
-    borderRadius: 10,
-  },
-  welcome: {
-    backgroundColor: theme.colors.blue200,
-    height: 60,
-    margin: 10,
-    borderRadius: 50,
-    alignItems: 'center',
+  container:{
+    width: '100%',
     justifyContent: 'center',
+    alignItems: 'center',
+    flex: 1,
   },
-  textWel:{
-    color: '#ffffff',
-    fontSize: 13,
-    fontFamily: theme.fonts.Poppins700,
+  content:{
+    width: RFPercentage(65),
+    paddingLeft: RFPercentage(6),
+    paddingRight: RFPercentage(6),
+    marginTop: RFPercentage(4),
+    justifyContent: 'space-between',
+    alignItems: 'center',
   },
+  
   button:{
     paddingHorizontal: 10,
     marginLeft: 7,

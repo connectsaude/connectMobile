@@ -1,4 +1,5 @@
 import { StyleSheet } from 'react-native';
+import { RFPercentage } from 'react-native-responsive-fontsize';
 import { theme } from '../../global/styles/theme';
 
 export const styles = StyleSheet.create({
@@ -7,12 +8,12 @@ export const styles = StyleSheet.create({
     justifyContent: 'center'
   },
   content:{
-    backgroundColor: theme.colors.blue200,
-    borderRadius: 10,
+    backgroundColor: theme.colors.primary,
+    borderRadius: RFPercentage(2),
     alignItems: 'center',
     justifyContent: 'center',
-    width: 90,
-    height: 116,
+    width: RFPercentage(18),
+    height: RFPercentage(23),
 
   },
   title:{

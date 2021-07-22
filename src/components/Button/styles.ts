@@ -3,10 +3,10 @@ import { theme } from '../../global/styles/theme';
 
 export const styles = StyleSheet.create({
   container: {
-      backgroundColor: theme.colors.blue200,
+      backgroundColor: theme.colors.primary,
       borderRadius: 10,
       width: '100%',
-      fontFamily: theme.fonts.Inter700,
+      fontFamily: theme.fonts.bold,
       color: '#ffffff',
       marginTop: 25,
       height: 40,
@@ -15,7 +15,7 @@ export const styles = StyleSheet.create({
   },
   title: {
     color: '#ffffff',
-    fontFamily: theme.fonts.Inter700,
+    fontFamily: theme.fonts.medium,
     fontSize: 18,
   }
 })

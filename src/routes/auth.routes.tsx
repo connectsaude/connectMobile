@@ -1,5 +1,5 @@
 import React from 'react';
-import { createStackNavigator } from '@react-navigation/stack';
+import { createStackNavigator, TransitionSpecs } from '@react-navigation/stack';
 import { SignIn } from '../screens/SignIn';
 import { SignUp } from '../screens/SignUp';
 import { RecoveryPass } from '../screens/RecoveryPass';
@@ -30,7 +30,7 @@ export function AuthRoutes() {
         component={SignUp}
       />
 
-      <Screen
+      <Screen 
         name="RecoveryPass"
         component={RecoveryPass}
       />

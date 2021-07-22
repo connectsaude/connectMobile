@@ -1,36 +1,31 @@
 import { StyleSheet } from 'react-native';
+import { RFPercentage, RFValue } from 'react-native-responsive-fontsize';
 import { getStatusBarHeight } from 'react-native-status-bar-height';
 import { theme } from '../../global/styles/theme';
 
 export const styles = StyleSheet.create({
   container:{
+    height: RFPercentage(10),
     marginTop: getStatusBarHeight(),
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    paddingBottom:10,
-    borderBottomWidth:2,
-    borderBottomColor: theme.colors.blue200,
+    borderBottomWidth: 1,
+    borderBottomColor: theme.colors.primary,
+    padding: RFPercentage(2)
   },
   textLabel:{
     alignItems: 'center',  
   },
   title:{
-    color: theme.colors.blue100,
-    fontFamily: theme.fonts.Poppins700,
-    fontSize: 15,
-    marginTop: 5,
-    marginBottom: -5,
-  },
-  subTitle:{
-    color: theme.colors.blue100,
-    fontFamily: theme.fonts.Inter500,
-    fontSize: 10,
+    color: theme.colors.primary,
+    fontFamily: theme.fonts.bold,
+    fontSize: RFValue(24),
   },
   menu:{
-    marginLeft: 12,
+    marginLeft: 0,
   },
   notification:{
-    marginRight:  12,
+    marginRight:  0,
   }
 })

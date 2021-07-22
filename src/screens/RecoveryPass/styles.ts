@@ -17,19 +17,19 @@ export const styles = StyleSheet.create({
   },
   title:{
     textAlign: 'center',
-    color: theme.colors.blue200,
-    fontFamily: theme.fonts.Poppins700,
+    color: theme.colors.primary,
+    fontFamily: theme.fonts.bold,
   },
   scroll:{
     width: '100%',
     marginTop: 0,
   },
   textLabel:{
-    color: theme.colors.blue100,
+    color: theme.colors.primary,
     fontSize: 14,
     fontWeight: '500',
     marginTop: 5,
-    fontFamily: theme.fonts.Poppins700,
+    fontFamily: theme.fonts.bold,
     
   },
   contentModal: {
@@ -61,7 +61,7 @@ export const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   buttonClose: {
-    backgroundColor: theme.colors.blue200,
+    backgroundColor: theme.colors.primary,
     
   },
   textStyle: {
@@ -72,7 +72,7 @@ export const styles = StyleSheet.create({
   modalText: {
     marginBottom: 15,
     textAlign: "center",
-    color: theme.colors.blue200,
-    fontFamily: theme.fonts.Poppins700,
+    color: theme.colors.primary,
+    fontFamily: theme.fonts.bold,
   }
 })

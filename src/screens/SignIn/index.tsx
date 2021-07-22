@@ -54,9 +54,9 @@ export function SignIn() {
             onPress={() => setHidePass(!hidePass)}
             style={styles.iconEye} >
             {hidePass ?
-              <Ionicons name="eye" size={24} color="#5697BF" />
+              <Ionicons name="eye" size={24} color="#2a65c8" />
               :
-              <Ionicons name="eye-off" size={24} color="#5697BF" />
+              <Ionicons name="eye-off" size={24} color="#2a65c8" />
             }
 
           </TouchableOpacity>
@@ -73,7 +73,7 @@ export function SignIn() {
         <RectButton onPress={() => handleSignUp()} style={styles.buttonCadastro} >
           <AntDesign
             name="adduser"
-            color="#5697BF"
+            color="#2a65c8"
             size={20}
           />
           <Text style={styles.titleButton} >Cadastra-se</Text>
