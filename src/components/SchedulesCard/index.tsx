@@ -14,10 +14,9 @@ type Props = {
   type: string;
   locale: string;
   id: string;
-  onPress: (id: GestureResponderEvent) => void;
 }
 
-export function SchedulesCard({ id, date, type, onPress, status, locale }: Props) {
+export function SchedulesCard({ id, date, type, status, locale }: Props) {
 
   const [details, setDetails] = useState(false);
   const heightnew = useSharedValue(RFPercentage(20))

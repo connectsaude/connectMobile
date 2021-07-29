@@ -4,7 +4,7 @@ import {
   TextInput, 
   KeyboardTypeOptions,
    ReturnKeyTypeOptions, 
-   Text, StyleProp } from 'react-native';
+   Text } from 'react-native';
 
 import { styles } from './styles'
 
@@ -16,6 +16,8 @@ type Props = {
   keyboardType?: KeyboardTypeOptions | undefined;
   returnKeyType?: ReturnKeyTypeOptions;
   Label?: string;
+  value?: string;
+  multiline?: boolean;
 }
 
 export function Input({ 
@@ -25,13 +27,17 @@ export function Input({
   keyboardType,
   placeholder,
   Label,
+  multiline,
+  value,
   placeholderTextColor,
    ...props }: Props){
   return(
     <View>
       <Text style={styles.textLabel} >{Label}</Text>
         <TextInput 
+        value={value}
         keyboardType={keyboardType}
+        multiline={multiline}
         returnKeyType={returnKeyType}
         secureTextEntry={secureTextEntry}
         placeholder={placeholder}

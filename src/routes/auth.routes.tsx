@@ -5,8 +5,9 @@ import { SignUp } from '../screens/SignUp';
 import { RecoveryPass } from '../screens/RecoveryPass';
 import { Home } from '../screens/Home';
 import { Schedules } from '../screens/Schedules';
-
-
+import { CreateSchedules } from '../screens/CreateSchedules';
+import { SchedulesLocale } from '../screens/CreateSchedules/SchedulesLocale'
+import { CardSusVirtual } from '../screens/CardSUSVirtual'
 
 const { Navigator, Screen } = createStackNavigator();
 
@@ -20,7 +21,24 @@ export function AuthRoutes() {
           backgroundColor: 'transparent'
         }
       }}
-    >
+    ><Screen
+        name="Home"
+        component={Home}
+      />
+      <Screen
+        name="Cartao do SUS"
+        component={CardSusVirtual}
+      />
+      
+      
+      <Screen
+    name="Localização"
+    component={SchedulesLocale}
+  />
+      <Screen
+        name="Novo Agendamento"
+        component={CreateSchedules}
+      />
       <Screen
         name="SignIn"
         component={SignIn}
@@ -30,19 +48,18 @@ export function AuthRoutes() {
         component={SignUp}
       />
 
-      <Screen 
+      <Screen
         name="RecoveryPass"
         component={RecoveryPass}
       />
-      <Screen
-        name="Home"
-        component={Home}
-      />
+
       <Screen
         name="Agendamentos"
         component={Schedules}
       />
-
+      
+      
+      
 
     </Navigator>
   );

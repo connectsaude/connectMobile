@@ -9,6 +9,7 @@ import { SchedulesCard } from '../../components/SchedulesCard';
 
 import { styles } from './styles'
 import { RectButton } from 'react-native-gesture-handler';
+import { useNavigation } from '@react-navigation/native';
 
 type Props = {
   open: () => void;
@@ -26,13 +27,10 @@ type SchedulesProps = {
 
 export function Schedules({ open }: Props) {
 
+  const navigator = useNavigation();
 
-  const [schedules, setSchedules] = useState<SchedulesProps>();
-  const modalizeRef = useRef<Props>(null);
-
-  function handleModal(id: string) {
-    setSchedules(ListSchedules.find(list => list.id === id))
-    modalizeRef.current?.open();
+  function handleCreate(){
+    navigator.navigate('Novo Agendamento')
   }
 
   return (
@@ -41,7 +39,9 @@ export function Schedules({ open }: Props) {
         <HeaderNavigate
           title="Agendamentos"
           action={
-            <ButtonAdd />
+            <ButtonAdd 
+              onPress={handleCreate}
+            />
           }
         />
       </View>
@@ -55,7 +55,6 @@ export function Schedules({ open }: Props) {
         renderItem={({ item }) =>
         <View style={styles.container} >
           <SchedulesCard
-            onPress={() => handleModal(item.id)}
             id={item.id}
             date={item.date}
             type={item.type}

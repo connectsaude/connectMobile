@@ -37,7 +37,7 @@ export function CardProfile(){
           </View>
           <View style={styles.contentDetails} >
           <Text style={styles.textTitle} >Bem Vindo Daniel !</Text>
-          <Text style={styles.textDetails}>Tipo Sanquineo O+</Text>
+          <Text style={styles.textDetails}>Tipo Sangueneo O+</Text>
           </View>
         </Animated.View>
       </View>

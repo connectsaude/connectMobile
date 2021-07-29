@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, FlatList, Text } from 'react-native';
-import { useNavigation } from '@react-navigation/native'
+import { useNavigation } from '@react-navigation/native';
 import { Header } from '../../components/Header';
 import { ListHome } from '../../components/ListHome'
 import { ListItensHome } from '../../utils/ListItensHome';

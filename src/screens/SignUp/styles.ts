@@ -21,10 +21,10 @@ export const styles = StyleSheet.create({
     
   },
   title:{
-    color: theme.colors.blue100,
+    color: theme.colors.primary,
     fontSize: 14,
     marginTop: 5,
-    fontFamily: theme.fonts.Poppins700,
+    fontFamily: theme.fonts.bold,
   },
   data: {
     flexDirection: 'row',

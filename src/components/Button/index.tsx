@@ -1,6 +1,6 @@
 import React, { ReactNode } from 'react';
 import { RectButton, RectButtonProps } from 'react-native-gesture-handler'
-import { Text} from 'react-native';
+import { Text } from 'react-native';
 import { styles } from './styles';
 
 
@@ -9,7 +9,7 @@ type ButtonProps = RectButtonProps & {
   onPress?: () =>  void;
 }
 
-export function Button({ children, onPress, ...props }: ButtonProps) {
+export function Button({ children, onPress,...props }: ButtonProps) {
   return (
     <RectButton 
     style={styles.container}
