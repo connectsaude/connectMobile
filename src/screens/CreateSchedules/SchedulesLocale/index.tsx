@@ -9,10 +9,10 @@ import { styles } from './styles'
 
 export function SchedulesLocale() {
 
-  const Navigator = useNavigation();
+  const navigator = useNavigation();
 
   function handleFinish(){
-    Navigator.navigate('Home');
+    navigator.navigate('Home');
   }
 
   return (

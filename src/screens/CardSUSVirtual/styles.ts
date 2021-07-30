@@ -9,6 +9,7 @@ export const styles = StyleSheet.create({
   content: {
     alignItems: 'center',
     justifyContent: 'center',
+    borderRadius: RFPercentage(2)
   },
   image: {
     height: RFPercentage(41),

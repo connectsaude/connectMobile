@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React from 'react';
 import { View, Text, FlatList } from 'react-native';
 import { ButtonAdd } from '../../components/ButtonAdd';
 import { HeaderNavigate } from '../../components/HeaderNavigate';
@@ -8,24 +8,11 @@ import { SchedulesCard } from '../../components/SchedulesCard';
 
 
 import { styles } from './styles'
-import { RectButton } from 'react-native-gesture-handler';
 import { useNavigation } from '@react-navigation/native';
 
-type Props = {
-  open: () => void;
 
-}
 
-type SchedulesProps = {
-  id: string;
-  type: string;
-  date: string;
-  status: string;
-  locale: string;
-  contat: string;
-}
-
-export function Schedules({ open }: Props) {
+export function Schedules() {
 
   const navigator = useNavigation();
 

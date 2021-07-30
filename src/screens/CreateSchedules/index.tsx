@@ -19,7 +19,7 @@ import { styles } from './styles';
 
 export function CreateSchedules() {
 
-  const Navigator = useNavigation();
+  const navigator = useNavigation();
   const [date, setDate] = useState(new Date());
   const [mode, setMode] = useState('');
   const [show, setShow] = useState(false);
@@ -65,7 +65,7 @@ export function CreateSchedules() {
   }
 
   function handleNext() {
-    Navigator.navigate('Localização');
+    navigator.navigate('Localização');
   }
 
   return (
@@ -149,8 +149,9 @@ export function CreateSchedules() {
                 testID="DateTimePicker"
                 value={date}
                 mode={mode}
+                minuteInterval={20}
                 minimumDate={new Date()}
-                display="default"
+                display="spinner"
                 onChange={onChange}
               />
             )}

@@ -33,7 +33,7 @@ export function CardProfile(){
     <View style={styles.contentProfile} >
         <Animated.View style={[styles.cardProfile , style]}>
           <View style={styles.contentimage} >
-            <Image style={styles.image} source={{uri: 'https://upload.wikimedia.org/wikipedia/commons/e/ed/Daniel_em_abril_de_2018_%28cropped%29.jpg',}}/>
+            <Image style={styles.image} source={{uri: 'https://ichef.bbci.co.uk/news/640/cpsprodpb/8230/production/_115482333_gettyimages-641517806.jpg',}}/>
           </View>
           <View style={styles.contentDetails} >
           <Text style={styles.textTitle} >Bem Vindo Daniel !</Text>

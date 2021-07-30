@@ -7,7 +7,8 @@ import { Home } from '../screens/Home';
 import { Schedules } from '../screens/Schedules';
 import { CreateSchedules } from '../screens/CreateSchedules';
 import { SchedulesLocale } from '../screens/CreateSchedules/SchedulesLocale'
-import { CardSusVirtual } from '../screens/CardSUSVirtual'
+import { CardSusVirtual } from '../screens/CardSUSVirtual';
+import { Exams } from '../screens/Exams'
 
 const { Navigator, Screen } = createStackNavigator();
 
@@ -21,7 +22,16 @@ export function AuthRoutes() {
           backgroundColor: 'transparent'
         }
       }}
-    ><Screen
+    >
+      <Screen
+        name="SignIn"
+        component={SignIn}
+      />
+      <Screen
+        name="Meus Exames"
+        component={Exams}
+      />
+      <Screen
         name="Home"
         component={Home}
       />
@@ -29,20 +39,16 @@ export function AuthRoutes() {
         name="Cartao do SUS"
         component={CardSusVirtual}
       />
-      
-      
+
       <Screen
-    name="Localização"
-    component={SchedulesLocale}
-  />
+        name="Localização"
+        component={SchedulesLocale}
+      />
       <Screen
         name="Novo Agendamento"
         component={CreateSchedules}
       />
-      <Screen
-        name="SignIn"
-        component={SignIn}
-      />
+
       <Screen
         name="SignUp"
         component={SignUp}
@@ -57,9 +63,7 @@ export function AuthRoutes() {
         name="Agendamentos"
         component={Schedules}
       />
-      
-      
-      
+
 
     </Navigator>
   );
